@@ -1,21 +1,29 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+// import {BrowserRouter as Router, route} from 'react-router-dom'
 import "./App.css";
 
+import Body from "./components/body/navbar"
+import Signup from "./components/body/signup"
+
+
 class App extends Component {
+
+state = {
+  show: "Sign Up"
+}
+
+
+
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+<div>
+  <Body>{this.state.show}</Body>
+
+  <Signup />
+   </div>
     );
   }
 }
 
 export default App;
+
