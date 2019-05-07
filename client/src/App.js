@@ -1,29 +1,29 @@
-// import React, { Component } from 'react';
-// // import {BrowserRouter as Router, route} from 'react-router-dom'
-// import './App.css';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-// import Body from './components/body/navbar';
-// import Signup from './components/body/signup';
-// import Login from './components/body/login';
+import { Provider } from "react-redux";
+// import store from "./store";
 
-// class App extends Component {
-// 	state = {
-// 		show: 'Sign Up'
-// 	};
+import Navbar from "./components/layout/Navbar";
+import Landing from "./components/layout/Landing";
+import Register from "./components/auth/Register";
+import Login from "./components/auth/Login";
 
-// 	render() {
-// 		return (
-// 			<div>
-//         <Body>
-//           {this.state.show}
-//         </Body>
+class App extends Component {
+  render() {
+    return (
+    //   <Provider store={store}>
+        <Router>
+          <div className="App">
+            <Navbar />
+            <Route exact path="/" component={Landing} />
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/login" component={Login} />
+          </div>
+        </Router>
+    //   </Provider>
+    );
+  }
+}
 
-// 				<Signup />
-
-// 				<Login />
-// 			</div>
-// 		);
-// 	}
-// }
-
-// export default App;
+export default App;
