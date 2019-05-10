@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+
 class Register extends Component {
   constructor() {
     super();
@@ -11,21 +12,27 @@ class Register extends Component {
       errors: {}
     };
   }
+
 onChange = e => {
     this.setState({ [e.target.id]: e.target.value });
   };
+
 onSubmit = e => {
     e.preventDefault();
+
 const newUser = {
       name: this.state.name,
       email: this.state.email,
       password: this.state.password,
       password2: this.state.password2
     };
+
 console.log(newUser);
   };
+
 render() {
     const { errors } = this.state;
+
 return (
       <div className="container">
         <div className="row">
@@ -84,7 +91,7 @@ return (
                 <label htmlFor="password2">Confirm Password</label>
               </div>
               <div className="col s12" style={{ paddingLeft: "11.250px" }}>
-                <button
+                <Link to="/dashboard"
                   style={{
                     width: "150px",
                     borderRadius: "3px",
@@ -95,7 +102,7 @@ return (
                   className="btn btn-large waves-effect waves-light hoverable blue accent-3"
                 >
                   Sign up
-                </button>
+                </Link>
               </div>
             </form>
           </div>
@@ -104,4 +111,5 @@ return (
     );
   }
 }
+
 export default Register;
