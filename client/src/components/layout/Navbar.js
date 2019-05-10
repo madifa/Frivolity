@@ -19,7 +19,7 @@ class Navbar extends Component {
               className="col s5 brand-logo center black-text"
             >
               <i className="material-icons">code</i>
-              What is going on tbh
+              What is going on tbh 
             </Link>
           </div>
         </nav>
