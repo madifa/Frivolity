@@ -67,7 +67,7 @@ return (
                 <label htmlFor="password">Password</label>
               </div>
               <div className="col s12" style={{ paddingLeft: "11.250px" }}>
-                <button
+                <Link to="dashboard"
                   style={{
                     width: "150px",
                     borderRadius: "3px",
@@ -78,7 +78,7 @@ return (
                   className="btn btn-large waves-effect waves-light hoverable blue accent-3"
                 >
                   Login
-                </button>
+                </Link>
               </div>
             </form>
           </div>
