@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+
 class Login extends Component {
   constructor() {
     super();
@@ -9,19 +10,25 @@ class Login extends Component {
       errors: {}
     };
   }
+
 onChange = e => {
     this.setState({ [e.target.id]: e.target.value });
   };
+
 onSubmit = e => {
     e.preventDefault();
+
 const userData = {
       email: this.state.email,
       password: this.state.password
     };
+
 console.log(userData);
   };
+
 render() {
     const { errors } = this.state;
+
 return (
       <div className="container">
         <div style={{ marginTop: "4rem" }} className="row">
@@ -80,4 +87,5 @@ return (
     );
   }
 }
+
 export default Login;
